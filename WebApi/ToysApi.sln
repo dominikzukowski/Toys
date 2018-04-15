@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToysApi", "ToysApi\ToysApi.csproj", "{063ECBFF-57F5-4AB3-A7E3-D2F3A5777754}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToysApi", "ToysApi\ToysApi.csproj", "{063ECBFF-57F5-4AB3-A7E3-D2F3A5777754}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToysApi.Model", "Model\ToysApi.Model.csproj", "{B680CF13-23B2-4F4C-A679-850D80662F43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToysApi.Repository", "ToysApi.Repository\ToysApi.Repository.csproj", "{549605B2-A2B1-4A3B-A6DB-B1C2DE63A7FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{063ECBFF-57F5-4AB3-A7E3-D2F3A5777754}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{063ECBFF-57F5-4AB3-A7E3-D2F3A5777754}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{063ECBFF-57F5-4AB3-A7E3-D2F3A5777754}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B680CF13-23B2-4F4C-A679-850D80662F43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B680CF13-23B2-4F4C-A679-850D80662F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B680CF13-23B2-4F4C-A679-850D80662F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B680CF13-23B2-4F4C-A679-850D80662F43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{549605B2-A2B1-4A3B-A6DB-B1C2DE63A7FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{549605B2-A2B1-4A3B-A6DB-B1C2DE63A7FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{549605B2-A2B1-4A3B-A6DB-B1C2DE63A7FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{549605B2-A2B1-4A3B-A6DB-B1C2DE63A7FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
