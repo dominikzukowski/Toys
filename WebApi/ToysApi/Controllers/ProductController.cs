@@ -3,24 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ToysApi.Repository;
+using ToysApi.Model;
 
 namespace ToysApi.Controllers
 {
     [Route("api/[controller]")]
-    public class ValuesController : Controller
+    public class ProductController : Controller
     {
+        IProductRepository _repository;
+        public ProductController(IProductRepository repository)
+        {
+            _repository = repository;
+        }
+
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Product> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _repository.GetProducts();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Product Get(int id)
         {
-            return "value";
+            return _repository.GetProduct(id);
         }
 
         // POST api/values

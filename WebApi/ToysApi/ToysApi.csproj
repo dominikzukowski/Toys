@@ -16,4 +16,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Model\ToysApi.Model.csproj" />
+    <ProjectReference Include="..\ToysApi.Repository\ToysApi.Repository.csproj" />
+  </ItemGroup>
+
 </Project>
