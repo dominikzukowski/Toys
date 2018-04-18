@@ -17,33 +17,30 @@ namespace ToysApi.Controllers
             _repository = repository;
         }
 
-        // GET api/values
         [HttpGet]
-        public IEnumerable<Product> Get()
+        public async Task<IActionResult> Get()
         {
-            return _repository.GetProducts();
+            var products = await _repository.GetProducts();
+            return Ok(products);
         }
 
-        // GET api/values/5
         [HttpGet("{id}")]
-        public Product Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            return _repository.GetProduct(id);
+            var product = await _repository.GetProduct(id);
+            return Ok(product);
         }
 
-        // POST api/values
         [HttpPost]
         public void Post([FromBody]string value)
         {
         }
 
-        // PUT api/values/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/values/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

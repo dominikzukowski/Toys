@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using ToysApi.Model;
 
 namespace ToysApi.Repository
 {
     public interface IProductRepository
     {
-        IEnumerable<Product> GetProducts();
-        Product GetProduct(int id);
+        Task<IEnumerable<Product>> GetProducts();
+        Task<Product> GetProduct(int id);
     }
 }

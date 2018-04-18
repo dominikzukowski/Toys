@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using ToysApi.Model;
 
 namespace ToysApi.Repository
@@ -12,14 +13,14 @@ namespace ToysApi.Repository
             new Product(){ Id = 2, Name = "Bricks", Description = "200 pieces", Price = 30, Rating = 3.5 },
             new Product(){ Id = 3, Name = "Doll", Description = "Small, pink dall", Price = 15, Rating = 4.2 }};
 
-        public Product GetProduct(int id)
+        public Task<Product> GetProduct(int id)
         {
-            return products.FirstOrDefault(x => x.Id == id);
+            return Task.Run(() => products.FirstOrDefault(x => x.Id == id));
         }
 
-        public IEnumerable<Product> GetProducts()
+        public Task<IEnumerable<Product>> GetProducts()
         {
-            return products;
+            return Task.Run(()=>products);
         }
     } 
 }
