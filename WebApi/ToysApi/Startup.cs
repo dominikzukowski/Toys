@@ -36,7 +36,12 @@ namespace ToysApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
+            app.UseCors(builder => builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials());   
+                app.UseMvc();
         }
     }
 }

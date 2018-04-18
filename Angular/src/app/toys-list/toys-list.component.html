@@ -8,12 +8,16 @@
                 <thead>
                     <tr>
                         <th>Nazwa</th>
-                        <th>Dostępność</th>
                         <th>Cena</th>
                         <th>Ocena</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <tr *ngFor ='let product of products'>
+                        <th>{{product.name}}</th>
+                        <th>{{product.price}}</th>
+                        <th>{{product.rating}}</th>
+                    </tr>
                 </tbody>
             </table>
         </div>
